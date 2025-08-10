@@ -18,7 +18,8 @@ def rps():
             SCISSORS = 3
 
         playerchoice = input(
-            "\nEnter... \n1 for Rock,\n2 for Paper, or \n3 for Scissors:\n\n")
+            "\nEnter... \n1 for Rock,\n2 for Paper, or \n3 for Scissors:\n\n"
+        )
 
         if playerchoice not in ["1", "2", "3"]:
             print("You must enter 1, 2, or 3.")
@@ -31,9 +32,7 @@ def rps():
         computer = int(computerchoice)
 
         print(f"\nYou chose {str(RPS(player)).replace('RPS.', '').title()}.")
-        print(
-            f"Python chose {str(RPS(computer)).replace('RPS.', '').title()}.\n"
-        )
+        print(f"Python chose {str(RPS(computer)).replace('RPS.', '').title()}.\n")
 
         def decide_winner(player, computer):
             nonlocal player_wins
@@ -83,7 +82,9 @@ def rps():
     return play_rps
 
 
-rock_paper_scissors = rps()
+rock_paper_scissors = (
+    rps()
+)  # This is the function that will be called when the module is imported or executed.
 
 if __name__ == "__main__":
-    rock_paper_scissors()
+    rock_paper_scissors()  # This will only run if this file is executed directly, not when imported as a module.

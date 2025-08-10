@@ -6,14 +6,14 @@ game_count = 0
 
 
 def play_rps():
-
     class RPS(Enum):
         ROCK = 1
         PAPER = 2
         SCISSORS = 3
 
     playerchoice = input(
-        "\nEnter... \n1 for Rock,\n2 for Paper, or \n3 for Scissors:\n\n")
+        "\nEnter... \n1 for Rock,\n2 for Paper, or \n3 for Scissors:\n\n"
+    )
 
     if playerchoice not in ["1", "2", "3"]:
         print("You must enter 1, 2, or 3.")
@@ -25,11 +25,12 @@ def play_rps():
 
     computer = int(computerchoice)
 
-    print("\nYou chose " + str(RPS(player)).replace('RPS.', '').title() + ".")
-    print("Python chose " + str(RPS(computer)
-                                ).replace('RPS.', '').title() + ".\n")
+    print("\nYou chose " + str(RPS(player)).replace("RPS.", "").title() + ".")
+    print("Python chose " + str(RPS(computer)).replace("RPS.", "").title() + ".\n")
 
-    def decide_winner(player, computer):
+    def decide_winner(
+        player, computer
+    ):  # This function decides the winner of the game.
         if player == 1 and computer == 3:
             return "🎉 You win!"
         elif player == 2 and computer == 1:
@@ -45,7 +46,7 @@ def play_rps():
 
     print(game_result)
 
-    global game_count
+    global game_count  # This will make a local scope variable a global variable.
     game_count += 1
 
     print("\nGame count: " + str(game_count))

@@ -1,5 +1,3 @@
-
-
 from math import pi
 import sys
 import random as rdm
@@ -9,8 +7,10 @@ from rps7 import rock_paper_scissors
 
 print(pi)
 
-# for item in dir(rdm):
-#     print(item)
+print(dir(rdm))  # List all attributes and methods of the rdm module.
+
+for item in dir(rdm):
+    print(item)
 
 print(kansas.capital)
 kansas.randomfunfact()

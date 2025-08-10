@@ -4,45 +4,47 @@ class Vehicle:
         self.model = model
 
     def moves(self):
-        print('Moves along..')
+        print("Moves along..")
 
     def get_make_model(self):
         print(f"I'm a {self.make} {self.model}.")
 
 
-my_car = Vehicle('Tesla', 'Model 3')
+my_car = Vehicle("Tesla", "Model 3")
 
 # print(my_car.make)
 # print(my_car.model)
 my_car.get_make_model()
 my_car.moves()
 
-your_car = Vehicle('Cadillac', 'Escalade')
+your_car = Vehicle("Cadillac", "Escalade")
 your_car.get_make_model()
 your_car.moves()
 
 
-class Airplane(Vehicle):
+class Airplane(Vehicle):  # Inheritance of Vehicle class.
     def __init__(self, make, model, faa_id):
-        super().__init__(make, model)
+        super().__init__(
+            make, model
+        )  # Call the parent class's __init__ method. Because we want to reuse it.
         self.faa_id = faa_id
 
-    def moves(self):
-        print('Flies along..')
+    def moves(self):  # Method overriding.
+        print("Flies along..")
 
 
 class Truck(Vehicle):
     def moves(self):
-        print('Rumbles along..')
+        print("Rumbles along..")
 
 
 class GolfCart(Vehicle):
-    pass
+    pass  # Inherits everything from Vehicle without changes.
 
 
-cessna = Airplane('Cessna', 'Skyhawk', 'N-12345')
-mack = Truck('Mack', 'Pinnacle')
-golfwagon = GolfCart('Yamaha', 'GC100')
+cessna = Airplane("Cessna", "Skyhawk", "N-12345")
+mack = Truck("Mack", "Pinnacle")
+golfwagon = GolfCart("Yamaha", "GC100")
 
 cessna.get_make_model()
 cessna.moves()
@@ -51,7 +53,7 @@ mack.moves()
 golfwagon.get_make_model()
 golfwagon.moves()
 
-print('\n\n')
+print("\n\n")
 
 for v in (my_car, your_car, cessna, mack, golfwagon):
     v.get_make_model()

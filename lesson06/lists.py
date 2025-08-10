@@ -1,15 +1,15 @@
-users = ['Dave', 'John', 'Sara']
+users = ["Dave", "John", "Sara"]  # List of users
 
-data = ['Dave', 42, True]
+data = ["Dave", 42, True]  # List of mixed data types
 
 emptylist = []
 
-print("Dave" in emptylist)
+print("Dave" in emptylist)  # Returns False
 
 print(users[0])
 print(users[-2])
 
-print(users.index('Sara'))
+print(users.index("Sara"))
 
 print(users[0:2])
 print(users[1:])
@@ -17,28 +17,28 @@ print(users[-3:-1])
 
 print(len(data))
 
-users.append('Elsa')
+users.append("Elsa")
 print(users)
 
-users += ['Jason']
+users += ["Jason"]
 print(users)
 
-users.extend(['Robert', 'Jimmy'])
+users.extend(["Robert", "Jimmy"])  # Extend the list with multiple elements
 print(users)
 
-# users.extend(data)
-# print(users)
-
-users.insert(0, 'Bob')
+users.extend(data)
 print(users)
 
-users[2:2] = ['Eddie', 'Alex']
+users.insert(0, "Bob")
 print(users)
 
-users[1:3] = ['Robert', 'JPJ']
+users[2:2] = ["Eddie", "Alex"]  # Insert multiple elements at index 2
 print(users)
 
-users.remove('Bob')
+users[1:3] = ["Robert", "JPJ"]
+print(users)
+
+users.remove("Bob")
 print(users)
 
 print(users.pop())
@@ -51,19 +51,20 @@ print(users)
 data.clear()
 print(data)
 
-users[1:2] = ['dave']
+users.pop()
+users[1:2] = ["dave"]
 users.sort()
 print(users)
 
-users.sort(key=str.lower)
+users.sort(key=str.lower)  # Case insensitive sort
 print(users)
 
 nums = [4, 42, 78, 1, 5]
 nums.reverse()
 print(nums)
 
-# nums.sort(reverse=True)
-# print(nums)
+nums.sort(reverse=True)
+print(nums)
 
 print(sorted(nums, reverse=True))
 print(nums)
@@ -85,7 +86,7 @@ print(mylist)
 
 # Tuples
 
-mytuple = tuple(('Dave', 42, True))
+mytuple = tuple(("Dave", 42, True))
 
 anothertuple = (1, 4, 2, 8, 2, 2)
 
@@ -94,7 +95,7 @@ print(type(mytuple))
 print(type(anothertuple))
 
 newlist = list(mytuple)
-newlist.append('Neil')
+newlist.append("Neil")
 newtuple = tuple(newlist)
 print(newtuple)
 

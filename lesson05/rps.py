@@ -3,15 +3,14 @@ import random
 from enum import Enum
 
 
-class RPS(Enum):
+class RPS(Enum):  # RPS.ROCK = 1, RPS.PAPER = 2, RPS.SCISSORS = 3
     ROCK = 1
     PAPER = 2
     SCISSORS = 3
 
 
 print("")
-playerchoice = input(
-    "Enter...\n1 for Rock,\n2 for Paper, or \n3 for Scissors:\n\n")
+playerchoice = input("Enter...\n1 for Rock,\n2 for Paper, or \n3 for Scissors:\n\n")
 
 player = int(playerchoice)
 
@@ -23,12 +22,12 @@ computerchoice = random.choice("123")
 computer = int(computerchoice)
 
 print("")
-print("You chose " + str(RPS(player)).replace('RPS.', '') + ".")
-print("Python chose " + str(RPS(computer)).replace('RPS.', '') + ".")
+print("You chose " + str(RPS(player)).replace("RPS.", "") + ".")
+print("Python chose " + str(RPS(computer)).replace("RPS.", "") + ".")
 print("")
 
 if player == 1 and computer == 3:
-    print("🎉 You win!")
+    print("🎉 You win!")  # alt, opt | start + '.' to bring up emoji menu
 elif player == 2 and computer == 1:
     print("🎉 You win!")
 elif player == 3 and computer == 2:

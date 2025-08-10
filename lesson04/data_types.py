@@ -6,15 +6,16 @@ import math
 first = "Dave"
 last = "Gray"
 
-# print(type(first))
-# print(type(first) == str)
-# print(isinstance(first, str))
+print(type(first))
+print(type(first) == str)
+print(type(first) is str)
+print(isinstance(first, str))
 
 # constructor function
-# pizza = str("Pepperoni")
-# print(type(pizza))
-# print(type(pizza) == str)
-# print(isinstance(pizza, str))
+pizza = str("Pepperoni")
+print(type(pizza))
+print(type(pizza) == str)
+print(isinstance(pizza, str))
 
 # Concatenation
 fullname = first + " " + last
@@ -32,18 +33,22 @@ statement = "I like rock music from the " + decade + "s."
 print(statement)
 
 # Multiple lines
-multiline = '''
+multiline = """
 Hey, how are you?                                   
 
 I was just checking in.    
                                 All good?
 
-'''
+"""
 print(multiline)
 
 # Escaping special characters
-sentence = 'I\'m back at work!\tHey!\n\nWhere\'s this at\\located?'
+sentence = "I'm back at work!\tHey!\n\nWhere's this at\\located?"
 print(sentence)
+
+sentence2 = "I'm back at work!\tHey!\n\nWhere's this at\\located?"
+print(sentence2)
+
 
 # String Methods
 
@@ -107,7 +112,7 @@ y = float(1.14)
 print(type(gpa))
 
 # complex type
-comp_value = 5+3j
+comp_value = 5 + 3j
 print(type(comp_value))
 print(comp_value.real)
 print(comp_value.imag)

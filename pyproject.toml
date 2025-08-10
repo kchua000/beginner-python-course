@@ -1,0 +1,25 @@
+[project]
+name = "beginner-python-course"
+version = "1.0"
+description = "A Python project setup for Jupyter with ipykernel"
+authors = [
+    { name = "Kien C Hua", email = "kchua000@gmail.com" }
+]
+requires-python = ">=3.8"
+dependencies = [
+    "dotenv>=0.9.9",
+    "requests>=2.32.4",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ipykernel"
+]
+
+[tool.uv]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+]
+# Optional section for uv-specific config.
